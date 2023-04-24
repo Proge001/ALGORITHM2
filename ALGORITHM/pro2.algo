@@ -1,0 +1,66 @@
+ALGORITHM probone-+
+VAR
+    let sum = 0;
+BEGIN
+    /Create a function to find the distinct elements conts findDistinctElements = ( set1, set2) =>
+    {
+        //Loop through set1 for 
+        (let i = 0; i < set1.length; i++)
+        //initialise isDistinct 
+        let isDistinct = true;
+        
+        //Loop through set2 
+        for (let j = 0; j< set2.length; j++)
+        //Check if the elements are the same 
+        if(set1[i]=== set2[j]){
+            isDistinct = false;
+            break;
+        }
+    }
+    //if the element is distinct add it to sum
+    if(isDistinct){
+        sum +=set1[i];
+    }
+
+    //Do the same for set2
+    for(let i =0; i < set2.length; j++){
+        //initialize isDistinct
+        let isDistinct = true;
+
+        //Loop through set1
+        for(let j = 0; j < set1.length; j++){
+            //check if the elements are the same
+            if(set2[i] === set1[j]) {isDistinct = false;
+            break;}
+        }
+    }
+    //if the element is distinct add it to sum
+    if( isDistinct){ sum += set2[i];
+    }
+    //return sum
+    return sum;
+END
+
+ALGORITHM probtwo
+VAR
+    let ps = 0;
+BEGIN
+    //loop through the vectors and calculate the product
+    for(lrt i = 0; i < v1.length; i++){
+        ps += (v1[i] * v2[i]);
+    }
+
+    //Return the dot product
+    return ps;
+
+    //create a function to determine if the vectors are orthogonal 
+    function isOrthogonal(v1, v2)
+    //calculate the dot product of the two vectors
+    let ps = dotProduct(v1, v2);
+
+    //check if the product is zero 
+    if(ps === 0) {
+        return true;
+    }
+    return false;
+END
